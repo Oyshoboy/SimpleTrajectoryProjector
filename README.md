@@ -25,12 +25,19 @@ As well as previous steps you can also add: Velocity Sampler, Relative Sampler a
 
 ### Configurations:
 *radius* - is the radius of the trajectory to check.
+
 *layerMask* - which layers to check.
+
 *launchMagnitude* - launch force, direction is used from the gameObject, which has the projector component.
+
 *stepSize* - distance between each check.
+
 *resolutionIterations* - how many check iterations.
+
 *minimumDistance* - if distance below this value, then trajectory disables.
+
 *smoothingFactor* - how smooth trajectory is.
+
 *blendCurve* - curve to blend between instant trajectory and smooth.
 
 ###### Inspired by:
