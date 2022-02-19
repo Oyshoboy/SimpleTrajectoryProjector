@@ -9,7 +9,7 @@ Download [.unitypackage](https://github.com/Oyshoboy/SimpleTrajectoryProjector/r
 ### Simple and fast option:
 1. Put a TrajectoryProjector.cs component on any object you want.
 2. Create a line renderer component, and add it to the TrajectoryProjector.cs component
-3. Create a point object, which will be displayed at the end of trajectory, then put it inside your projector game object and add it to TrajectoryProjector.cs
+3. Create a point object, which will be displayed at the end of trajectory, then put it inside your projector game object and add it to TrajectoryProjector.cs. Make sure pointer object don't have any colliders, or it's colliders layer ignoring by projector.
 ![simple projector structure](https://i.imgur.com/DLHuGbJ.png)
 That's it. It's all you need to get started.
 
