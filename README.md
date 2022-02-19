@@ -33,5 +33,10 @@ As well as previous steps you can also add: Velocity Sampler, Relative Sampler a
 **smoothingFactor** - how smooth trajectory is.</br>
 **blendCurve** - curve to blend between instant trajectory and smooth.</br>
 
+### Profiling:
+This is kinda cheap solution, but it's all depends from how smooth your projection and how high resolution is.</br>
+![default configuration](https://user-images.githubusercontent.com/23486183/154798479-a0e593cc-c395-47a1-abaa-668262c39811.png)
+
+
 ###### Inspired by:
 Brilliant tutorials by Sebastian Lague about kinematic equations. [Check them out](https://www.youtube.com/watch?v=v1V3T5BPd7E).
