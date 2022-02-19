@@ -33,7 +33,8 @@ public class TrajectoryProjector : MonoBehaviour
     public float radius = 0.033f;
     public LayerMask layerMask = ~0;
     public float magnitudeThreshold = 0.2f;
-    public int handsMagnitudeBufferSize = 20;
+    [HideInInspector]
+    public int samplerMagnitudeBufferSize = 20;
 
     [Header("Physics")]
     public float launchMagnitude = 10f;
@@ -47,20 +48,19 @@ public class TrajectoryProjector : MonoBehaviour
     public int smoothingFactor = 5;
     [Tooltip("Blend curve between instant and smoothed trajectories")]
     public AnimationCurve blendCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-
-    // [Header("Debug")]
+    
     [HideInInspector]public TrajectoryDirections trajectoryDirection;
     [HideInInspector]public TrajectoryState trajectoryState;
     [HideInInspector]public float totalDistance;
     [HideInInspector]public int currentResolution;
-
-    [HideInInspector]public List<Vector3> tempPointsBuffer;
+    
     [HideInInspector]public Vector3[] instantPointsBuffer;
     [HideInInspector]public Vector3[] smoothPointsBuffer;
-    [HideInInspector]public List<float> handsMagnitudeBuffer;
+    [HideInInspector]public List<Vector3> tempPointsBuffer;
     [HideInInspector]public List<Vector3> pointsBuffer;
     [HideInInspector]public List<Vector3> initialVelocityBuffer;
     [HideInInspector]public List<float> distanceBuffer;
+    [HideInInspector]public List<float> samplerMagnitudeBuffer;
     #endregion
 
     #region built-in methods
@@ -76,7 +76,7 @@ public class TrajectoryProjector : MonoBehaviour
         if (!velocitySampler) return;
         var samplerMag = velocitySampler.velocity.magnitude;
         var res = relativeSampler ? Mathf.Abs(relativeSampler.velocity.magnitude - samplerMag) : samplerMag;
-        StoreDataToBuffer(handsMagnitudeBuffer, res, handsMagnitudeBufferSize);
+        StoreDataToBuffer(samplerMagnitudeBuffer, res, samplerMagnitudeBufferSize);
     }
     #endregion
 
@@ -336,7 +336,7 @@ public class TrajectoryProjector : MonoBehaviour
             return true;
         }
             
-        return AverageFromBuffer(handsMagnitudeBuffer) > magnitudeThreshold;
+        return AverageFromBuffer(samplerMagnitudeBuffer) > magnitudeThreshold;
     }
 
     private bool AllignedWithSamplerDirection()
