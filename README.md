@@ -33,7 +33,8 @@ As well as previous steps you can also add: Velocity Sampler, Relative Sampler a
 **smoothingFactor** - how smooth trajectory is.</br>
 **blendCurve** - curve to blend between instant trajectory and smooth.</br>
 
-### Profiling:
+## Optimization
+### Profiling
 This is kinda cheap solution, but it's all depends from how smooth your projection and how high resolution is. Here is the profiler with default configuration & on empty project:</br>
 ![default configuration](https://user-images.githubusercontent.com/23486183/154798479-a0e593cc-c395-47a1-abaa-668262c39811.png)
 
