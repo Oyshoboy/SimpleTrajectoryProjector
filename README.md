@@ -1,5 +1,6 @@
 # SimpleTrajectoryProjector
 ![trajectory projector quick overview](https://media.giphy.com/media/Cv2IQgsbcT1RDm7oDK/giphy.gif)
+
 Is a useful and lightweight tweak for Unity 3d, that's allows to draw trajectories for physics projectiles based on velocity and gravity. Good for teleporting UI for VR or projectiles prediction. I was using it for VR UI needs.
 
 # Getting started
@@ -21,3 +22,16 @@ As well as previous steps you can also add: Velocity Sampler, Relative Sampler a
 *Relative Sampler* - is the sampler, whose velocity gonna be substracted from Velocity Sampler, in order to check only relative velocity. For example if you need to track hands on VR rig.
 
 *Direction Sampler* - is the sampler, whos direction going to be compared with projector, in order to disable trajectory drawing if it's not aligned with view. Change "aligned direction threshold" to change the limits.
+
+### Configurations:
+*radius* - is the radius of the trajectory to check.
+*layerMask* - which layers to check.
+*launchMagnitude* - launch force, direction is used from the gameObject, which has the projector component.
+*stepSize* - distance between each check.
+*resolutionIterations* - how many check iterations.
+*minimumDistance* - if distance below this value, then trajectory disables.
+*smoothingFactor* - how smooth trajectory is.
+*blendCurve* - curve to blend between instant trajectory and smooth.
+
+###### Inspired by:
+I grabbed some information from those brilliant tutorials, by Sebastian Lague about kinematic equations. [Check them out](https://www.youtube.com/watch?v=v1V3T5BPd7E).
