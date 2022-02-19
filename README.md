@@ -3,7 +3,7 @@
 Is a useful and lightweight tweak for Unity 3d, that's allows to draw trajectories for physics projectiles based on velocity and gravity. Good for teleporting UI for VR or projectiles prediction. I was using it for VR UI needs.
 
 # Getting started
-Download .unitypackage or use gist.
+Download [.unitypackage](https://github.com/Oyshoboy/SimpleTrajectoryProjector/releases) or use [gist](https://gist.github.com/Oyshoboy/e8cef4bb4de38059947bdda4756292bc).
 
 ### Simple and fast option:
 1. Put a TrajectoryProjector.cs component on any object you want.
