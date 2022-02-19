@@ -34,4 +34,4 @@ As well as previous steps you can also add: Velocity Sampler, Relative Sampler a
 **blendCurve** - curve to blend between instant trajectory and smooth.</br>
 
 ###### Inspired by:
-I grabbed some information from those brilliant tutorials, by Sebastian Lague about kinematic equations. [Check them out](https://www.youtube.com/watch?v=v1V3T5BPd7E).
+Brilliant tutorials by Sebastian Lague about kinematic equations. [Check them out](https://www.youtube.com/watch?v=v1V3T5BPd7E).
