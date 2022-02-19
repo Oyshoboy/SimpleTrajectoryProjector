@@ -17,28 +17,21 @@ That's it. It's all you need to get started.
 As well as previous steps you can also add: Velocity Sampler, Relative Sampler and Direction Sampler.
 ![advanced configuration](https://user-images.githubusercontent.com/23486183/154796922-7c4c09b1-874c-4b14-8e2d-b13be11ed90b.png)
 
-*Velocity Sampler* - is the rigidBody, whos velocity projector gonna to use, in order to check if magnitude limit was reached. If it's reached, then projector gonna disable trajectory, untill it's come back to stable state ( you can configure it, by adjusting "magnitude threshold").
+**Velocity Sampler** - is the rigidBody, whos velocity projector gonna to use, in order to check if magnitude limit was reached. If it's reached, then projector gonna disable trajectory, untill it's come back to stable state ( you can configure it, by adjusting "magnitude threshold").
 
-*Relative Sampler* - is the sampler, whose velocity gonna be substracted from Velocity Sampler, in order to check only relative velocity. For example if you need to track hands on VR rig.
+**Relative Sampler** - is the sampler, whose velocity gonna be substracted from Velocity Sampler, in order to check only relative velocity. For example if you need to track hands on VR rig.
 
-*Direction Sampler* - is the sampler, whos direction going to be compared with projector, in order to disable trajectory drawing if it's not aligned with view. Change "aligned direction threshold" to change the limits.
+**Direction Sampler** - is the sampler, whos direction going to be compared with projector, in order to disable trajectory drawing if it's not aligned with view. Change "aligned direction threshold" to change the limits.
 
 ### Configurations:
-*radius* - is the radius of the trajectory to check.
-
-*layerMask* - which layers to check.
-
-*launchMagnitude* - launch force, direction is used from the gameObject, which has the projector component.
-
-*stepSize* - distance between each check.
-
-*resolutionIterations* - how many check iterations.
-
-*minimumDistance* - if distance below this value, then trajectory disables.
-
-*smoothingFactor* - how smooth trajectory is.
-
-*blendCurve* - curve to blend between instant trajectory and smooth.
+**radius** - is the radius of the trajectory to check.</br>
+**layerMask** - which layers to check.</br>
+**launchMagnitude** - launch force, direction is used from the gameObject, which has the projector component.</br>
+**stepSize** - distance between each check.</br>
+**resolutionIterations** - how many check iterations.</br>
+**minimumDistance** - if distance below this value, then trajectory disables.</br>
+**smoothingFactor** - how smooth trajectory is.</br>
+**blendCurve** - curve to blend between instant trajectory and smooth.</br>
 
 ###### Inspired by:
 I grabbed some information from those brilliant tutorials, by Sebastian Lague about kinematic equations. [Check them out](https://www.youtube.com/watch?v=v1V3T5BPd7E).
